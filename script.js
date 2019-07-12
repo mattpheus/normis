@@ -1,17 +1,21 @@
-
+/* eslint-disable */
 let start = false; //Initilizing of the game
 
 let pattern = []; //order
-let nomisTurn; //computer turn
-let lightUp; //nomis light up
+let compTurn; //computer turn
+let flashSpeed; //nomis light up speed
+let flash; // activating the flash itself
+
+
 
 let playerPattern = [];//player order
 let playerTurn; //player turn
-
 let goodMemory; //user is getting the memorization correct
+
 let turnCount; //interval turn number
 
 let win; //winning
+
 
 const startButton = document.querySelector('#start');
 const topLeft = document.querySelector('#top-left');
@@ -21,13 +25,80 @@ const bottomRight = document.querySelector('#bottom-right');
 
 
 
-startButton.addEventListener('click', (event) => {
-    if (start === true) {
-        gameTurn();
+startButton.addEventListener('click', function(event){
+    if (start == false) {
+        start = true
+        playTheGame()
+    } 
+    else {
+        start = false
+        darkColor()
+    }
+});
+
+function playTheGame() {
+    pattern = [];
+    playerPattern = [];
+    flashSpeed = 0;
+    playerTurn = 1;
+    turnCount = 1;
+    goodMemory = true;
+        for (let i = 0; i < 20; i++) {
+            pattern.push([1,2,3,4])
+        }
+        compTurn = true
+
+        flashSpeed = setInterval(gameTurn, (time) => {
+            
+        }, 700);
+}
+
+function gameTurn() {
+    if (flashSpeed == turnCount){
+        compTurn = false
+        darkColor();
     }
 
-});
-//MDN research
+    if (compTurn) {
+        setTimeout(() => {
+            if (pattern[flashSpeed] == 1){
+                one();
+            }
+            if (order[flashSpeed] == 2){
+                two();
+            }
+            if (order[flashSpeed]== 3){
+                three();
+            }
+            if (order[flashSpeed]== 4){
+                four();
+            }
+            
+
+        }, 300);
+    }
+
+}
+
+function one(){
+    topLeft.style.backgroundColor = 'lightgreen';
+}
+
+function two(){
+    topRight.style.backgroundColor = 'brightred';
+
+}
+function three(){
+    bottomLeft.style.backgroundColor = 'brightyellow';
+
+}
+function four(){
+    bottomRight.style.backgroundColor = 'brightblue';
+
+}
+
+
+// //MDN research
 
 function darkColor() {
     topLeft.style.backgroundColor = 'background: #3ec914a2;';
@@ -37,32 +108,16 @@ function darkColor() {
 
 }
 
-function brightColor() {
-    topLeft.style.backgroundColor = 'lightgreen';
-    topRight.style.backgroundColor = 'brightred';
-    bottomLeft.style.backgroundColor = 'brightyellow';
-    bottomRight.style.backgroundColor = 'brightblue';
-}
-
-topLeft.addEventListener('click',(event)) => {
-    if (start) {
-        playerPattern.push(1);
+topLeft.addEventListener('click' ,function(event){
+    if (start === true) {
+        playerPattern.push(1)
+        one();
+        
     }
-}
+    
+})
 
-topRight.addEventListener('click',(event)) => {
-    if (start) {
-        playerPattern.push(1);
-    }
-}
 
-// function gameTurn(){
-//     start = false;
-//     if(start == pattern) {
-//         nomisTurn = false;
-//         start = true
+// function winGame(){
+
 // }
-
-// function green (){
-
-//     topleft.style.backgroundColor = "lightgreen"
