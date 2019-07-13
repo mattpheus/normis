@@ -3,10 +3,8 @@ let start = false; //Initilizing of the game
 
 let pattern = []; //order
 let compTurn; //computer turn
-let flashSpeed; //nomis light up speed
+let flashSpeed = 0 //nomis flash speed
 let flash; // activating the flash itself
-
-
 
 let playerPattern = [];//player order
 let playerTurn; //player turn
@@ -18,6 +16,7 @@ let win; //winning
 
 
 const startButton = document.querySelector('#start');
+
 const topLeft = document.querySelector('#top-left');
 const topRight = document.querySelector('#top-right');
 const bottomLeft = document.querySelector('#bottom-left');
@@ -37,18 +36,14 @@ startButton.addEventListener('click', function(event){
 });
 
 function playTheGame() {
-    pattern = [];
-    playerPattern = [];
-    flashSpeed = 0;
-    playerTurn = 1;
-    turnCount = 1;
-    goodMemory = true;
+ 
         for (let i = 0; i < 20; i++) {
             pattern.push([1,2,3,4])
         }
+
         compTurn = true
 
-        flashSpeed = setInterval(gameTurn, (time) => {
+        setInterval(function () {
             
         }, 700);
 }
@@ -112,12 +107,59 @@ topLeft.addEventListener('click' ,function(event){
     if (start === true) {
         playerPattern.push(1)
         one();
-        
+        setTimeout(function(time) {
+        darkColor();
+        }, 300);   
     }
+    console.log (playerPattern)
     
-})
+});
 
+topRight.addEventListener('click' ,function(event){
+    if (start === true) {
+        playerPattern.push(2)
+        two();
+        setTimeout(function(time) {
+            darkColor();
+        }, 300);
+    }
+    console.log (playerPattern)
+   
+});
+
+bottomLeft.addEventListener('click' ,function(event){
+    if (start === true) {
+        playerPattern.push(3)
+        three();
+        setTimeout(function(time) {
+        darkColor();
+        }, 300);
+    }
+    console.log (playerPattern)
+  
+});
+
+bottomRight.addEventListener('click' ,function(event){
+    if (start === true) {
+        playerPattern.push(4)
+        four();
+        setTimeout(function(time) {
+        darkColor();
+        }, 300);
+    }
+    console.log (playerPattern)
+    
+  
+});
 
 // function winGame(){
 
 // }
+
+
+   // pattern = [];
+    // playerPattern = [];
+    // flashSpeed = 0;
+    // playerTurn = 1;
+    // turnCount = 1;
+    // goodMemory = true;
