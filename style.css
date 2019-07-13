@@ -1,3 +1,8 @@
+body {
+    font-family: 'Righteous', cursive;
+    color: black;
+}
+
 #outer-circle {
     background: #343942;
     border-radius: 50%;
@@ -6,7 +11,6 @@
     position: relative;
     border-style: solid;
     border-width: 20px;
-
 }
 
 #switches {
@@ -26,6 +30,11 @@
     position: relative;
     top: 15px;
     left: 60px;
+    margin: 0 0 39px 0px;
+}
+
+.button {
+    margin: 0 0 0 0;
 }
 
 #top-left {
@@ -101,3 +110,21 @@
     border-width: 2px;
     box-sizing: border-box;
 }
+
+#display-inline {
+    border: solid 2px black;
+    border-radius: 5px;
+    color: white;
+    width: 20px;
+    height: 23px;
+    font-size: 13px;
+    background-color: #342626;
+    position: relative;
+    left: 3px;
+    margin: -73px 0 0 69px;
+}
+
+
+
+
+
