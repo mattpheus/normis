@@ -1,17 +1,21 @@
 /* eslint-disable */
-let start = false; //Initilizing of the game
 
-let compTurn; //computer turn
-let flashSpeed = 0; //nomis flash speed
-let flash; // activating the flash itself
 
-let playerPattern = []; //player order
-let playerTurn; //player turn
-let goodMemory; //user is getting the memorization correct
+// let compTurn; //computer turn
+// let flashSpeed = 0; //nomis flash speed
+// let flash; // activating the flash itself
 
-let turnCount; //interval turn number
+// let playerPattern = []; //player order
+// let playerTurn; //player turn
+// let goodMemory; //user is getting the memorization correct
 
-let win; //winning
+// let turnCount; //interval turn number
+
+// let win; //winning
+
+let start = false;
+
+let userInput = []
 
 const topLeft = document.querySelector('#top-left');
 const topRight = document.querySelector('#top-right');
@@ -21,114 +25,116 @@ const bottomRight = document.querySelector('#bottom-right');
 const startButton = document.querySelector('#start');
 
 startButton.addEventListener('click', function(event) {
-	if (start == false) {
-		start = true;
-		playTheGame();
+	if (start === false) {
+		start === true;
+		compStart();
 	} else {
 		start = false;
 	}
 });
 
 let patternItems = [topLeft, topRight, bottomLeft, bottomRight]; //order
-let currentPattern = [];
+let enumPatternItems = ["top-left", "top-right", "bottom-left", "bottom-right"];
+let currentPattern = []; //this is the new array from let enumPatternItems, so use this to log against what the user puts in.
 
-function one() {
-	patternItems[0].style.opacity = 1;
-}
-function two() {
-	patternItems[1].style.opacity = 1;
-}
-function three() {
-	patternItems[2].style.opacity = 1;
-}
-function four() {
-	patternItems[3].style.opacity = 1;
+function brightColor(index){
+	patternItems[index].style.opacity = 1;
 }
 
 function darkColor() {
-	patternItems[0].style.opacity = 0.2;
-	patternItems[1].style.opacity = 0.2;
-	patternItems[2].style.opacity = 0.2;
-	patternItems[3].style.opacity = 0.2;
+	for (let i = 0; i < patternItems.length; i++){
+		patternItems[i].style.opacity = 0.1;
+	} 
 }
 
 const showColors = function() {
 	let order = Math.floor(Math.random() * patternItems.length);
-	for (let i = 0; i < 1; i++) {
-		switch (order) {
-			case 0:
-				one();
-				currentPattern.push(patternItems[0]);
-
-				// darkColor();
-				setTimeout(() => {
-					darkColor();
-				}, 800);
-				break;
-			case 1:
-				two();
-				currentPattern.push(patternItems[1]);
-
-				// setTimeout(darkColor(), 200);
-				// darkColor();
-				setTimeout(() => {
-					darkColor();
-				}, 800);
-				break;
-			case 2:
-				currentPattern.push(patternItems[2]);
-				three();
-				// darkColor();
-				// setTimeout(darkColor(), 200);
-				setTimeout(() => {
-					darkColor();
-				}, 800);
-				break;
-			case 3:
-				currentPattern.push(patternItems[3]);
-				four();
-				// darkColor();
-				// setTimeout(darkColor(), 200);
-				setTimeout(() => {
-					darkColor();
-				}, 800);
-				break;
-		}
-	}
-	console.log(currentPattern);
-};
-
-const checkPress = function(event) {
-	console.log(event);
-	// if (event.target === currentPattern[0]) {
-	// 	console.log('yes');
-	// }
+	brightColor(order);
+	currentPattern.push(enumPatternItems[order])
+	//console.log(enumPatternItems);
+	setTimeout(() => {
+		darkColor();
+	}, 850);
+		
 };
 
 const stop = () => {
 	clearInterval(showColors);
 };
 
+
 let timer = 0;
-const playTheGame = function() {
-	let start = setInterval(() => {
+const compStart = function() {
+	//computer turn playing. It generates the random number
+	const compTurn = setInterval(() => {
 		timer += 1;
 		showColors();
 		if (timer === 5) {
-			clearInterval(start);
+			clearInterval(compTurn);
 		}
-	}, 1000);
+	}, 999);
+//console.log('computerTurnOn')
 };
 
+function userClick(event){
+	return event.target.id
+}
+//This is the user input.
+let count = 0;
+const userInputs = [];
+let userColorInput = function(event){
+	console.log(`Computer Pattern: ${currentPattern}`);
+	userInputs.push(userClick(event));	
+	//The bottom code represents the starting of my compare function.
+	if (currentPattern[count] != userInputs[count]) {
+		console.log("You Lose");
+	}
+	
 
 
-topLeft.addEventListener('click', checkPress(event));
+	
+	// console.log(`User Pattern: ${userInputs}`);
+	//let count = 0;
+	// return function(event) {
+	// 	count++;
+	// 	userInputs.push(userClick(event))
+	// 	console.log(userInputs)
+	// }
+	// for(let i = 0; i < 5; i++){
+	// 	let _userClick = userClick((event))
+	// 	userInputs.push(_userClick()) 
+	// }
 
-topRight.addEventListener('click', checkPress(event));
+	count++;
+}
 
-bottomLeft.addEventListener('click', checkPress(event));
 
-bottomRight.addEventListener('click', checkPress(event));
+// function countClicks(){
+// 	const clickLimit = 4
+// 	if (userColorInput(event) >= clickLimit) {
+// 		return true;
+// 	}
+// 	else {
+// 		return false;
+// 	}
+// }
+
+
+// function compare(){
+// 	if (currentPattern[count] != userColorInput[count])
+// 	console.log ()
+// 	else { (currentPattern[count] == userColorInput[count])
+// 	}
+// }
+// compare()
+
+
+// const checkPress = function(event) {
+// 	// if (event.target === currentPattern[0]) {
+// 	// 	console.log('yes');
+// 	// }
+// };
+
 
 // function winGame(){
 
