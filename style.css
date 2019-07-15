@@ -1,0 +1,130 @@
+body {
+    font-family: 'Righteous', cursive;
+    color: black;
+}
+
+#outer-circle {
+    background: #343942;
+    border-radius: 50%;
+    height: 410px;
+    width: 410px;
+    position: relative;
+    border-style: solid;
+    border-width: 20px;
+}
+
+#switches {
+    position: relative;
+    top: 60px;
+    left: 60px;
+}
+
+#title {
+    position: relative;
+    top: 35px;
+    left: 60px;
+    margin: 0px 0px 20px 0px;
+}
+
+#count {
+    position: relative;
+    top: 15px;
+    left: 60px;
+    margin: 0 0 39px 0px;
+}
+
+.button {
+    margin: 0 0 0 0;
+}
+
+#top-left {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    border-radius:200px;
+    background: #3ec914a2;
+    top: 50%;
+    left: 50%;
+    margin: -170px 0px 0px -170px;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+
+}
+
+#top-right {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    border-radius:200px;
+    background: #b61515a2;
+    top: 50%;
+    left: 50%;
+    margin: -170px -170px 0px 0px;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+
+}
+
+#bottom-left {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    border-radius:200px;
+    background: #e8e52391;
+    top: 50%;
+    left: 50%;
+    margin: 0px 0px 0px -170px;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+
+}
+
+#bottom-right {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    border-radius:200px;
+    background: #0c4e99a4;
+    top: 50%;
+    left: 50%;
+    margin: 0px 0px 0px 0px;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+
+}
+
+#inner-circle {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    border-radius:200px;
+    background: #fbfcfa;
+    top: 50%;
+    left: 50%;
+    margin: -85px 0px 0px -85px;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+}
+
+#display-inline {
+    border: solid 2px black;
+    border-radius: 5px;
+    color: white;
+    width: 20px;
+    height: 23px;
+    font-size: 13px;
+    background-color: #342626;
+    position: relative;
+    left: 3px;
+    margin: -73px 0 0 69px;
+}
+
+
+
+
+
