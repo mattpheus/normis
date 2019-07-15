@@ -111,7 +111,7 @@ body {
     box-sizing: border-box;
 }
 
-#display-inline {
+#timer {
     border: solid 2px black;
     border-radius: 5px;
     color: white;
