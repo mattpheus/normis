@@ -2,6 +2,8 @@
 
 Is a pattern memorization game. As the player you have to match the four patterns the computer selects for you. Basically simon says!
 
+![Nomis](https://raw.githubusercontent.com/mattpheus/normis/master/Nomis_image.png)
+
 ## Getting Started
 Click the link and play the game.
 
