@@ -39,7 +39,7 @@ const showColors = function() {
 	console.log('current pattern',currentPattern);
 	setTimeout(() => {
 		darkColor();
-	}, 800);
+	}, 600);
 		
 };
 
@@ -50,7 +50,7 @@ const showUserColors = function() {
 	console.log('user colors', showUserColors);
 	setTimeout(() => {
 		darkColor();
-	}, 800);
+	}, 600);
 
 }
 
@@ -68,7 +68,7 @@ const compStart = function() {
 		if (computerTimer === 5) {
 			clearInterval(compTurn);
 		}
-	}, 900);
+	}, 700);
 console.log('computerTurnOn')
 };
 
