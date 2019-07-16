@@ -30,7 +30,7 @@ Matthew Seecharan
 ## Acknowledgments
 Shout out to these folks who helped me!
 
-MeetUp - Progressive HTML, CSS, Javascript/frontend frameworks tutoring
-My GA SEI Cohort classmates
-My TA - Andre Pato
-My IA Lead - Mikayda Mills
+* MeetUp - Progressive HTML, CSS, Javascript/frontend frameworks tutoring team.
+* My GA SEI Cohort classmates.
+* My TA - Andre Pato.
+* My IA Lead - Mikayda Mills.
