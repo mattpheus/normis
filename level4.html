@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+    <head>
+        <meta charset="utf-8">
+        <title>Nomis Game</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+            <div id="outer-circle">
+                    <div id="top-left" onClick="userColorInput(event)"></div>
+                    <div id="top-right" onClick="userColorInput(event)"></div>
+                    <div id="bottom-left" onClick="userColorInput(event)"></div>
+                    <div id="bottom-right" onClick="userColorInput(event)"></div>
+                    <div id="inner-circle">
+                      <div id="title" class="game">NOMIS!</div>
+                      <div id="switches">
+                        <button class="button" id="start">Start</button>
+                      </div>
+                      <div id="turn"></div>
+                      <div id="count">COUNT</div>
+                      <div id="counter">04</div>
+                    </div>
+            </div>
+            <div id="modal-win" class="modal">
+
+              <div class="modal-win">
+                  <p>You got all the correct colors! Move on to round 5, the final round!</p>
+                  <a href="level5.html">Level 5</a>
+              </div>
+          </div>
+          <div id="modal-lose" class="modal">
+              <div class="modal-lose">
+                  <p>You got the patterns wrong, try this round again.</p>
+                  <a href="level4.html">Play Again</a>
+              </div>
+          </div>
+
+        <script src="./level4script.js"></script>
+
+    </body>
+</html>

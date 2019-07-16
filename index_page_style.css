@@ -1,0 +1,46 @@
+@keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -180px 0px;}
+}
+body  {
+    display: flex;
+    flex-direction: column;
+    color:#fff;
+    text-align:left;
+    background-image: url(https://media.giphy.com/media/HtuAZacO8buvu/giphy.gif);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    font-size: 1.5rem;
+    font-family: 'Righteous', cursive;
+    animation: backgroundScroll 8s linear 60;
+    background-color: rgba(74, 63, 63, 0.372);
+
+}
+/* http://www.tothenew.com/blog/moving-background-image-using-css/ for credit of the moving background image */
+
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgb(237, 15, 15)
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: rgb(23, 228, 12);
+    justify-content: left;
+}
+
+.title {
+    font-size: 6rem;
+}
+
+.button {
+    font-size: 2rem;
+    color: blue;
+}

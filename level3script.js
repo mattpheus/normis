@@ -1,3 +1,4 @@
+
 const topLeft = document.querySelector('#top-left');
 const topRight = document.querySelector('#top-right');
 const bottomLeft = document.querySelector('#bottom-left');
@@ -15,7 +16,7 @@ startButton.addEventListener('click', () => {
   }
 });
 
-const patternItems = [topLeft, topRight, bottomLeft, bottomRight];
+const patternItems = [topLeft, topRight, bottomLeft, bottomRight]; // order
 const enumPatternItems = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
 const currentPattern = [];
 
@@ -37,7 +38,7 @@ const showColors = function () {
   currentPattern.push(enumPatternItems[order]);
   setTimeout(() => {
     darkColor();
-  }, 800);
+  }, 600);
 };
 
 const showUserColors = function () {
@@ -46,12 +47,13 @@ const showUserColors = function () {
   currentPattern.push(enumPatternItems[order]);
   setTimeout(() => {
     darkColor();
-  }, 800);
+  }, 600);
 };
 
 const stop = () => {
   clearInterval(showColors);
 };
+
 
 let computerTimer = 1;
 const compStart = function () {
@@ -61,7 +63,7 @@ const compStart = function () {
     if (computerTimer === 5) {
       clearInterval(compTurn);
     }
-  }, 900);
+  }, 700);
 };
 
 function userClick(event) {

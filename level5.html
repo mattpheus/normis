@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+    <head>
+        <meta charset="utf-8">
+        <title>Nomis Game</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+            <div id="outer-circle">
+                    <div id="top-left" onClick="userColorInput(event)"></div>
+                    <div id="top-right" onClick="userColorInput(event)"></div>
+                    <div id="bottom-left" onClick="userColorInput(event)"></div>
+                    <div id="bottom-right" onClick="userColorInput(event)"></div>
+                    <div id="inner-circle">
+                      <div id="title" class="game">NOMIS!</div>
+                      <div id="switches">
+                        <button class="button" id="start">Start</button>
+                      </div>
+                      <div id="turn"></div>
+                      <div id="count">COUNT</div>
+                      <div id="counter">05</div>
+                    </div>
+            </div>
+            <div id="modal-win" class="modal">
+
+              <div class="modal-win">
+                  <p>You have got some good memory! Congrats you won!</p>
+                  <a href="http://www.google.com">Exit</a>
+                  
+              </div>
+          </div>
+          <div id="modal-lose" class="modal">
+              <div class="modal-lose">
+                  <p>You got the patterns wrong, try this round again.</p>
+                  <a href="level5.html">Play Again</a>
+              </div>
+          </div>
+
+        <script src="./level5script.js"></script>
+
+    </body>
+</html>
