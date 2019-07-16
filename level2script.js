@@ -27,7 +27,7 @@ function brightColor(index){
 
 function darkColor() {
 	for (let i = 0; i < patternItems.length; i++){
-		patternItems[i].style.opacity = 0.1;
+		patternItems[i].style.opacity = 0.2;
 	} 
 }
 
@@ -39,7 +39,7 @@ const showColors = function() {
 	console.log('current pattern',currentPattern);
 	setTimeout(() => {
 		darkColor();
-	}, 800);
+	}, 700);
 		
 };
 
@@ -50,7 +50,7 @@ const showUserColors = function() {
 	console.log('user colors', showUserColors);
 	setTimeout(() => {
 		darkColor();
-	}, 800);
+	}, 700);
 
 }
 
@@ -68,7 +68,7 @@ const compStart = function() {
 		if (computerTimer === 5) {
 			clearInterval(compTurn);
 		}
-	}, 900);
+	}, 800);
 console.log('computerTurnOn')
 };
 

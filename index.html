@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 
-<html>
-    <body>
+<html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>Nomis Game</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nomis Landing Page</title>
         <meta name="description" content="">
-        <link rel="stylesheet" type="text/css" href="style.css">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="index_page_style.css">
     </head>
-            <div id="outer-circle">
-                    <div id="top-left" onClick="userColorInput(event)"></div>
-                    <div id="top-right" onClick="userColorInput(event)"></div>
-                    <div id="bottom-left" onClick="userColorInput(event)"></div>
-                    <div id="bottom-right" onClick="userColorInput(event)"></div>
-                    <div id="inner-circle">
-                      <div id="title" class="game">NOMIS!</div>
-                      <div id="switches">
-                        <button class="button" id="start">Start</button>
-                      </div>
-                      <div id="turn"></div>
-                      <div id="count">COUNT</div>
-                      <div id="timer">00</div>
+    <body>
+            <main>
+                    <div class="container">
+                        <h1 class="title">Nomis</h1>
+                        <p>Instructions<ul>
+                            <li>Follow the FOUR color patterns that the computer gives you</li>
+                            <li>You (as the player) replicate the same FOUR color patterns the computer gives you</li>
+                            <li>If you reach round 5, you win!</li>
+                            <li>Miss a pattern memory, and RESET the round</li>
+                        </ul></p>
+                        <a class ="button" href="gamepage.html">Play</a>
+                        
                     </div>
-                  </div>
-
+                </main>
+        
         <script src="./script.js"></script>
-
     </body>
 </html>
